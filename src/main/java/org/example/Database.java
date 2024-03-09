@@ -13,7 +13,7 @@ public class Database {
         try {
             String url = "jdbc:mysql://localhost:3306/users";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            this.con = DriverManager.getConnection(url, "root", "230905Ilya");
+            this.con = DriverManager.getConnection(url, "root", "your_password");
             System.out.println("Все удачно");
             this.statement = con.createStatement();
         } catch (SQLException e) {
