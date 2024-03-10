@@ -5,15 +5,15 @@ import java.sql.SQLException;
 
 
 public class User {
-    int id;
-    String name;
-    String email;
-    String password;
+    private int id;
+    private String name;
+    private String email;
+    private String password;
     Database db = new Database();
-    User() {
-        System.out.println("Зарегистрируйтесь в системе");
+    public User() {
+
     }
-    User(int id) {
+    public User(int id) {
         try{
             ResultSet user_info = db.GetNameOfCurrentUser(id);
             this.id = id;
@@ -29,5 +29,17 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public int getId() {
+        return id;
     }
 }
